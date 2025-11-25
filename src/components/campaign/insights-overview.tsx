@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import { axiosInstance } from "../../api/axiosInstance";
-import { KPICardSkeleton } from "../skelton/kpi";
-import { KPICard } from "./kpi-card";
+import { axiosInstance } from "@/api/axiosInstance";
+import { KPICardSkeleton } from "@/components/skelton/kpi";
+import { KPICard } from "@/components/campaign/kpi-card";
 
 export const InsightsOverview: React.FC = () => {
   const {data:insights,isPending}=useQuery({

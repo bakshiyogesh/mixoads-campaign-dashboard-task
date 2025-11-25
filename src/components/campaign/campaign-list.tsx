@@ -1,11 +1,11 @@
-import { useQuery } from "@tanstack/react-query";
 import React, { useState, } from "react";
-import { axiosInstance } from "../../api/axiosInstance";
-import dayjs from "dayjs";
-import { CampaignCardSkeleton } from "../skelton/campaign";
 import { useNavigate } from "react-router-dom";
-import { STATUS_MAP } from "../../constants";
-import type { Campaign } from "./types";
+import dayjs from "dayjs";
+import { useQuery } from "@tanstack/react-query";
+import { axiosInstance } from "@/api/axiosInstance";
+import { CampaignCardSkeleton } from "@/components/skelton/campaign";
+import { STATUS_MAP } from "@/constants";
+import type { Campaign } from "@/components/campaign/types";
 
 const statusTabs = [
     { label: "All", value: "all" },

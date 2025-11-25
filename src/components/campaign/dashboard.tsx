@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
-import { CampaignList } from "./campaign-list"
-import { InsightsOverview } from "./insights-overview"
+import { CampaignList } from "@/components/campaign/campaign-list"
+import { InsightsOverview } from "@/components/campaign/insights-overview"
 
 export const CampaignDashboard:React.FC=()=>{
     return(

@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import { createBrowserRouter } from "react-router-dom";
-import { CampaignDashboard } from "./components/campaign/dashboard";
+import { CampaignDashboard } from "@/components/campaign/dashboard";
 import { NotFoundPage } from "@/components/NotFound";
 import { DashboardLayout } from "@/components/campaign/main-layout";
 
@@ -13,9 +13,8 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Suspense fallback={<CampaignDashboard />}>
+        element:
           <CampaignDashboard />
-        </Suspense>
       },
       {
         path: "campaign/:id",
