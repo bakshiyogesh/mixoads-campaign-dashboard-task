@@ -24,7 +24,7 @@ export const ShowLoadingToast = (message: string) => {
   });
 };
 
-export const ShowLoaderToast = (message: string) => {
+export const ShowLoaderToast = () => {
   toast.dismiss();
   // toast.promise(message,{})
 };
