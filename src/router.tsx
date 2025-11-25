@@ -1,8 +1,10 @@
+import { lazy, Suspense } from 'react';
 import { createBrowserRouter } from "react-router-dom";
 import { CampaignDashboard } from "./components/campaign/dashboard";
-import { CampaignDetails } from "./components/campaign/campaign-details";
-import { NotFoundPage } from "./components/NotFound";
-import { DashboardLayout } from "./components/campaign/main-layout";
+import { NotFoundPage } from "@/components/NotFound";
+import { DashboardLayout } from "@/components/campaign/main-layout";
+
+const CampaignDetails = lazy(() => import('@/components/campaign/campaign-details'));
 
 export const router = createBrowserRouter([
   {
@@ -11,7 +13,9 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <CampaignDashboard />
+        element: <Suspense fallback={<CampaignDashboard />}>
+          <CampaignDashboard />
+        </Suspense>
       },
       {
         path: "campaign/:id",

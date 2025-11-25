@@ -8,3 +8,16 @@ export type Campaign = {
     daily_budget: number,
     created_at: string,
 }
+
+export interface CampaignMetrics {
+  impressions?: number;
+  clicks?: number;
+  conversions?: number;
+  spend?: number;
+  ctr?: number;
+  cpc?: number;
+  conversion_rate?: number;
+}
+export interface CampaignDetailsProps {
+  id: string;
+}
