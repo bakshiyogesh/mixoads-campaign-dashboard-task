@@ -70,11 +70,11 @@ export const CampaignList: React.FC<{}> = () => {
                                 setSelectedCampaign(c)
                                 navigate(`/campaign/${c?.id}`)
                             }}
-                            className={`p-4 rounded border cursor-pointer hover:bg-gray-100 transition-all min-w-[240px] w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1rem)] ${selectedCampaign.id === c.id ? "border-blue-500 bg-blue-50" : "border-gray-300"}`}
+                            className={`p-4 rounded border cursor-pointer hover:bg-gray-100 transition-all  min-w-[240px] w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1rem)] ${selectedCampaign.id === c.id ? "border-blue-500 bg-blue-50" : "border-gray-300"}`}
                         >
                             <div className="flex justify-between items-center">
                                 <span className="font-bold">{c?.name}</span>
-                                <span className={`px-2 py-1 rounded text-xs font-semibold ${STATUS_MAP[c?.status as keyof typeof STATUS_MAP]}`}>{c?.status}</span>
+                                <span className={`px-2 py-1 rounded text-xs font-semibold  capitalize ${STATUS_MAP[c?.status as keyof typeof STATUS_MAP]}`}>{c?.status}</span>
                             </div>
                             <div className="mt-2 flex gap-2 items-center flex-wrap">
                                 <span className="text-xs text-gray-400">
