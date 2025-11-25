@@ -5,21 +5,20 @@ import { router } from './router';
 import './App.css'
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { Suspense } from 'react';
-import { CampaignDashboard } from './components/campaign/dashboard';
+import Loader from '@/components/ui/loader';
 
 const queryClient = new QueryClient();
-const App = () => {
 
+const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <ErrorBoundary>
-        <Suspense fallback={<CampaignDashboard />}>
-        <RouterProvider router={router} />
+        <Suspense fallback={<Loader />}>
+          <RouterProvider router={router} />
         </Suspense>
       </ErrorBoundary>
     </QueryClientProvider>
   );
 };
 
-
-export default App
+export default App;
