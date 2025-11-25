@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import React, { useMemo } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { axiosInstance } from "../../api/axiosInstance";
 import { KPICardSkeleton } from "../skelton/kpi";
 import { KPICard } from "./kpi-card";
@@ -10,6 +10,7 @@ import { CampaignCardSkeleton } from "../skelton/campaign";
 import useLiveCampaignMetrics from "@/hooks/useLiveCampaignMetrics";
 import { STATUS_MAP } from "../../constants";
 import type { Campaign, CampaignMetrics } from "./types";
+import { ChevronBackIcon } from "@/assets/icon";
 
 const useCampaignData = (id: string) => {
   const { data: campaign, isPending: campaignPending, error: campaignError } = useQuery({
@@ -88,8 +89,16 @@ const CampaignDetails: React.FC = () => {
     name = "",
   } = campaign || {};
 
+  const navigate = useNavigate();
+
   return (
     <div className="p-4 bg-white shadow rounded">
+      <button 
+        onClick={() => navigate(-1)}
+        className="text-blue-600 hover:text-blue-800 mb-4 transition-colors text-sm font-medium cursor-pointer"
+      >
+        <ChevronBackIcon />
+      </button>
       <h2 className="text-2xl font-bold px-3">
         {isLoading ? <div className="h-8 w-1/2 bg-gray-200 rounded mb-2 animate-pulse" /> : name}
       </h2>

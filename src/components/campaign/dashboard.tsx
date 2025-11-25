@@ -1,4 +1,3 @@
-import { Outlet } from "react-router-dom"
 import { CampaignList } from "@/components/campaign/campaign-list"
 import { InsightsOverview } from "@/components/campaign/insights-overview"
 
@@ -7,7 +6,6 @@ export const CampaignDashboard:React.FC=()=>{
       <div className="min-h-screen bg-gray-50">
         <InsightsOverview />
         <CampaignList  />
-        <Outlet/>
     </div>
     )
 }
