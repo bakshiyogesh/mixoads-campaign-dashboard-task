@@ -13,7 +13,7 @@ export const InsightsOverview: React.FC = () => {
         },
         select:(data)=>data?.data?.insights
     })
-    console.log({insights,isPending},insights);
+    
 const kpiList = [
   { label: "Total Campaigns", value: insights?.total_campaigns },
   { label: "Active", value: insights?.active_campaigns },

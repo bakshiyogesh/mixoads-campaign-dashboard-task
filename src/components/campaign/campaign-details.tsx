@@ -89,10 +89,10 @@ export const CampaignDetails: React.FC = () => {
 
     return (
         <div className="p-4 bg-white shadow rounded">
-            <h2 className="text-lg font-bold">{name || <div className="h-4 w-1/2 bg-gray-200 rounded mb-2 animate-pulse"></div>}</h2>
+            <h2 className="text-2xl font-bold px-3">{name || <div className="h-4 w-1/2 bg-gray-200 rounded mb-2 animate-pulse"></div>}</h2>
 
-            <section className="px-6 pt-8">
-                <h3 className="text-2xl font-bold mb-2">Campaign Performance Overview</h3>
+            <section className="px-3 pt-5">
+                <h3 className="text-xl font-bold mb-2">Campaign Performance Overview</h3>
                 <p className="text-gray-600 mb-6">
                     Key metrics for this campaign. Values update in real time.
                 </p>
@@ -105,7 +105,7 @@ export const CampaignDetails: React.FC = () => {
                 </div>
             </section>
 
-            <section className="px-6 pb-8">
+            <section className="px-3 pb-5">
                 <h3 className="text-xl font-semibold mb-2">Campaign Details</h3>
                 {campaignPending || insightsPending ? <CampaignCardSkeleton /> : <div className="flex flex-wrap gap-4">
                     <div className="p-4 rounded border min-w-[240px]">

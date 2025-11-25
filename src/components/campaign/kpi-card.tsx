@@ -1,6 +1,4 @@
-// src/components/KPICard.tsx
 import React from "react";
-
 
 export const KPICard: React.FC<{ label: string; value: number | string | undefined }> = ({ label, value }) => (
   <div className="bg-blue-50 rounded shadow flex-1 min-w-[140px] max-w-[220px] p-4">

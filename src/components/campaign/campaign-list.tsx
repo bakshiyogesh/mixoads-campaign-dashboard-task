@@ -5,6 +5,7 @@ import dayjs from "dayjs";
 import { CampaignCardSkeleton } from "../skelton/campaign";
 import { useNavigate } from "react-router-dom";
 import { STATUS_MAP } from "../../constants";
+import type { Campaign } from "./types";
 
 const statusTabs = [
     { label: "All", value: "all" },
@@ -13,15 +14,7 @@ const statusTabs = [
     { label: "Completed", value: "completed" },
 ];
 
-type Campaign = {
-    id: string,
-    name: string,
-    status: string,
-    platforms: string[],
-    budget: number,
-    daily_budget: number,
-    created_at: string,
-}
+
 
 const campaignInitialValues = { id: "", name: "", status: "", platforms: [], budget: 0, daily_budget: 0, created_at: "" };
 
