@@ -31,6 +31,11 @@ const kpiList = [
 
 
   return (
+    <section className="px-6 pt-8">
+        <h1 className="text-2xl font-bold mb-2">Campaign Performance Overview</h1>
+        <p className="text-gray-600 mb-6">
+          Key metrics across all campaigns. These indicators summarize your overall ad activity and effectiveness for the selected period.
+        </p>
     <div className="flex flex-wrap gap-4 mb-6">
     {isPending
       ? Array.from({ length: 6 }).map((_, i) => <KPICardSkeleton key={i} />)
@@ -39,5 +44,6 @@ const kpiList = [
         ))
     }
   </div>
+      </section>
   );
 };
