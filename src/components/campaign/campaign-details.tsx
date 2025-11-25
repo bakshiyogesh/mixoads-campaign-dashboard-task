@@ -113,7 +113,7 @@ const CampaignDetails: React.FC = () => {
         {isLoading ? (
           <CampaignCardSkeleton />
         ) : (
-          <div className="p-4 rounded border min-w-[240px]">
+          <div className={`p-4 rounded border cursor-pointer hover:bg-gray-100 transition-all min-w-[240px] w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1rem)]  border-gray-300`}>
             <div className="flex justify-between items-center">
               <span className="font-bold mr-2">{name}</span>
               <span
