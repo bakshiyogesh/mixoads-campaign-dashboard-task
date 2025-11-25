@@ -126,7 +126,7 @@ const CampaignDetails: React.FC = () => {
             <div className="flex justify-between items-center">
               <span className="font-bold mr-2">{name}</span>
               <span
-                className={`px-2 py-1 rounded text-xs font-semibold ${
+                className={`px-2 py-1 rounded text-xs font-semibold  capitalize ${
                   STATUS_MAP[status as keyof typeof STATUS_MAP] || "bg-gray-100"
                 }`}
               >
